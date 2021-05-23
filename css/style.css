@@ -174,8 +174,9 @@ header #navbarContainer ul
 }
 #heading
 {
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
     text-align: center;
+
     
 }
 .heading-h2
@@ -189,6 +190,7 @@ header #navbarContainer ul
     -webkit-text-fill-color: transparent;
     letter-spacing: .2rem;
     font-family: 'Nunito Sans', sans-serif;
+    
 
 }
 #overviewContant
@@ -204,6 +206,7 @@ header #navbarContainer ul
     font-family: 'Oswald', sans-serif;
     padding: 1rem;
     color: #285A84;
+    padding-bottom: 50px;
 
 }
 .main-para
@@ -333,7 +336,7 @@ footer
 .center
 {
   text-align: center;
-  margin-left: 38rem;
+  margin-left: 43rem;
   
 }
   
@@ -397,6 +400,12 @@ footer
     font-size:13px;
     color:rgb(231, 231, 231);
     margin-bottom:0;
+  }
+
+  #mail{
+    text-align: center;
+    color:rgb(231, 231, 231) ;
+    font-size: 20px;
   }
 
   
