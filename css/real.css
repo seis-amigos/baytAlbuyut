@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Open+Sans+Condensed:ital,wght@1,300&family=Oswald:wght@200&family=Pattaya&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
 html,body
 {
     padding: 0;
     margin: 0;
-    color: rgb(107, 107, 107);
+    color: #285A84;
     background-color: #f7f7f7;
     overflow-x:hidden ;
     
@@ -159,153 +159,110 @@ header #navbarContainer ul
     border: 1px solid #fff;
     padding: 10px 15px;
 }
-#overview
+/* ----------------------------------------------------------- */
+#cardHouses , #cardHouses2
 {
-    background-color: #f7f7f7;
-    padding-top: 15rem;
-    margin-top: -30vh;
-    
-    
+    padding: 3rem;
+    display: flex;  
+    margin-bottom: 95px;
+}
 
-}
-#overcontainer
+.house-card
 {
-    display: flex;
-}
-#heading
-{
-    margin-bottom: 8rem;
-    text-align: center;
-    
-}
-.heading-h2
-{
-    font-size: 1.8rem;
-    text-transform: capitalize;
-    font-weight: 700;
-    display: inline-block;
-    background: -webkit-linear-gradient(#7ed56f,#28b485);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: .2rem;
-    font-family: 'Nunito Sans', sans-serif;
-
-}
-#overviewContant
-{
-    width: 50%;
-}
-.h3
-{
-    margin-bottom: 1.5rem;
-    font-size: 1.6rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    padding: 1rem;
-    color: #285A84;
-
-}
-.main-para
-{
-    margin-bottom: 3rem;
-    box-sizing: inherit;
-    padding: 1rem;
-    text-align: justify;
-    font-family: 'Oswald', sans-serif;
-    color: #285A84;
-    font-weight: bolder;
-    letter-spacing: .5px;
-    font-size: 1.1rem;
-
-}
-#imgContainer
-{
-    width: 50%;
-    
-}
-#imgContainer .main-image
-{
+    background-color: transparent;
     width: 15rem;
-    height: 10rem;
-    position: absolute;
-    margin-left: 110px;
-    margin-top: 90px;
-}
-#imgContainer img:nth-child(1)
-{
-    transform: translate(5rem,1rem);
+    height:23rem;
+    perspective: 1000px;
+    margin: 0 40px;
+    
+    
     
 }
-#imgContainer img:nth-child(2)
+.house-card-ineer
 {
-    transform: translate(15rem,5rem);
-}
-#imgContainer img:nth-child(3)
-{
-    transform: translate(8rem,9rem);
-}
-
-#imgContainer .main-image:hover
-{
-    z-index: 50;
-    animation: image-animi .5s ease-out both;
-}
-
-@keyframes image-animi
-{
-    0% {
-        width: 15rem;
-        height: 10rem;
-      }
-      100% {
-        width: 20rem;
-        height: 15rem;
-        /* outline-style: solid;
-        outline-offset: 2;
-        outline-width: 10px;
-        outline-color: rgb(15, 126, 11);
-        padding: 10px; */
-      }
-}
-
-#slider-section
-{
-    
-    height: 95vh;    
-    background-size: cover;
-    background-position: top;
     position: relative;
-    display: block;
-    clip-path: polygon(0 15% ,100% 0 ,100% 80% ,0 99%);
-    overflow: hidden;
-    z-index: 90;
-
-}
-
-#imageShow
-{
-    background-image: url('https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg');
     width: 100%;
     height: 100%;
-    background-size: cover;
-   
-   
+    text-align: center;
+    transition: transform .6s;
+    transform-style:preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+    
 }
-@keyframes kenburns-top {
-    0% {
-      opacity: 10%;  
-      transform: scale(1) translateY(0);
-      transform-origin: 50% 16%;
-    }
-    100% {
-      transform: scale(1.25) translateY(-15px);
-      transform-origin: top;
-    }
-  }
-
+.house-card:hover .house-card-ineer
+{
+    transform: rotateY(180deg);
+    box-shadow: 0 0 50px 2px rgba(21, 255, 0, 0.205);
+}
+.house-card-front ,.house-card-back
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+    
+}
+.house-card-front 
+{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
   
- 
+.house-card-back 
+{
+    background-image:linear-gradient(to right bottom,#5EA669,rgba(8, 85, 59, 0.8));
+    color: white;
+    transform: rotateY(180deg);
+    
+}
+
+.card-header
+{
+    height: 40%;
+    background-color: #fff;
+    border-bottom-left-radius: 50%;
+    background-image: linear-gradient(to right bottom,#5ea6699f,rgba(143, 209, 186, 0.8)),url('../images/headerImg.png');
+    background-size: cover;
+    
+}
+
+.house-info 
+{
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+.house-info p:nth-child(1)
+{
+    font-weight: 700;
+}
+.house-price
+{
+    margin-top: 27%;
+    width: 100%;
+    font-family: 'Pattaya', sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 0 0 4px rgb(156, 156, 156);
+}
+
+
+#listContainer ul
+{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------- */
   
 footer
 {
@@ -398,5 +355,3 @@ footer
     color:rgb(231, 231, 231);
     margin-bottom:0;
   }
-
-  
