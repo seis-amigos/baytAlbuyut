@@ -32,7 +32,6 @@ header
     width: 8rem;
     font-family: 'Pattaya', sans-serif;
     color: #fff;
-    
 }
 
 header #navbarContainer li
@@ -62,8 +61,9 @@ header #navbarContainer ul
     display: block;
     font-size: 4rem;
     font-weight: 400;
-    letter-spacing: 6rem;
+    letter-spacing: 4rem;
     text-transform: uppercase;
+    margin-left: 7%;
 }
 .header-para
 {
@@ -72,13 +72,11 @@ header #navbarContainer ul
     font-size: 1rem;
     font-weight: 700;
     text-align: justify;
-    margin-left:28%;
+    margin-left: 33%;
     font-family: 'Nunito Sans', sans-serif;
-    letter-spacing: 2px;
-
-    
-    
+    letter-spacing: 10px;    
 }
+
 .space
 {
     margin-right: 100px;
@@ -135,27 +133,26 @@ header #navbarContainer ul
 }
 /* ----------------------------------------------------------- */
 
-
-
-    
-    
-    
-
-    
-    
-
-
-    
-
-
-
-
-#listContainer ul
-{
-    
+.img1 {
+  width: 3%;
+  padding-left: 100px;
+  padding-top: 20px;
+  margin-right: 10px;
+  
 }
 
+.img2 {
+  width: 3%;
+  padding-left: 100px;
+  padding-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 
+}
+ .para1 {
+  font-family: 'Francois One', sans-serif;
+  color: #285A84;
+ }
 
 
 
