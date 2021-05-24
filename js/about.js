@@ -15,40 +15,41 @@ let mem3= new Team ('images/crazymahmoud.jpeg','mahmoud','Devloper','github.com/
 let mem4=new Team('images/suzan.jpg','suzan','Devloper','github.com/Suzan-Amer');
 let mem5=new Team('images/suzan.jpg','suzan','Devloper','github.com/Suzan-Amer');
 
-console.log(teamMember);
- function details (){
-   let  teamdiv=document.getElementById('team');
-   for(let i=0;i<teamMember.length;i++){
-       let div=document.createElement('div');
-       teamdiv.appendChild(div);
-let card =document.createElement('div');
-div.appendChild(card);
-card.className="card"
+// console.log(teamMember);
+//  function details (){
+//    let  teamdiv=document.getElementById('team');
+//    for(let i=0;i<teamMember.length;i++){
+//        let div=document.createElement('div');
+//        teamdiv.appendChild(div);
+// let card =document.createElement('div');
+// div.appendChild(card);
+// card.className="card"
 
-let img =document.createElement('img');
-img.height=270;
-img.width=200;
-img.setAttribute("src",teamMember[i].url);
-card.appendChild(img);
+// let img =document.createElement('img');
+// img.className="imgteam";
+// img.height=270;
+// img.width=200;
+// img.setAttribute("src",teamMember[i].url);
+// card.appendChild(img);
 
-let contaner=document.createElement('div');
-card.appendChild(contaner);
+// let contaner=document.createElement('div');
+// card.appendChild(contaner);
 
-let h3=document.createElement('h3');
-contaner.appendChild(h3);
-h3.textContent=teamMember[i].name;
+// let h3=document.createElement('h3');
+// contaner.appendChild(h3);
+// h3.textContent=teamMember[i].name;
 
-let h4 =document.createElement('h4');
-contaner.appendChild(h4);
-h4.textContent=teamMember[i].postion;
+// let h4 =document.createElement('h4');
+// contaner.appendChild(h4);
+// h4.textContent=teamMember[i].postion;
 
-let pra=document.createElement('p');
-contaner.appendChild(pra);
-pra.textContent=teamMember[i].gitemail;
+// let pra=document.createElement('p');
+// contaner.appendChild(pra);
+// pra.textContent=teamMember[i].gitemail;
 
 
 
-   }
+//    }
 
- }
- details ();
+//  }
+//  details ();
