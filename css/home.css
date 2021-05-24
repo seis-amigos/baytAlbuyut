@@ -131,31 +131,58 @@ header #navbarContainer ul
     border: 1px solid #fff;
     padding: 10px 15px;
 }
-/* ----------------------------------------------------------- */
+/* ---------------tab1-------------------------------------------- */
 
 .img1 {
   width: 3%;
   padding-left: 100px;
   padding-top: 20px;
   margin-right: 10px;
-  
 }
 
 .img2 {
   width: 3%;
-  padding-left: 100px;
+  padding-left: 150px;
   padding-top: 20px;
   margin-right: 10px;
   margin-left: 10px;
-
 }
+
+.img3 {
+  width: 3%;
+  padding-left: 150px;
+  padding-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
  .para1 {
   font-family: 'Francois One', sans-serif;
   color: #285A84;
+  position: relative;
+  top: -17px;
  }
 
+/* ---------------tab2-------------------------------------------- */
+.img4 {
+  float: left;
+  width: 25%;
+  padding-left: 50px;
+  padding-top: 20px;
+  margin-right: 50px;
+  border-radius: 20ch;
+  /* display: block; */
+}
 
-
+.para2 {
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Francois One', sans-serif;
+  background-color: rgba(128, 128, 128, 0.315);
+  /* display: inline; */
+  /* position: relative; */
+  /* top: -17px; */
+ }
 
 
 
