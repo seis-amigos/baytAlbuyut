@@ -10,7 +10,6 @@ let span = document.getElementsByClassName("close")[0];
 
 
 
-
 // function to open the add form
 addBtn.addEventListener('click',function(){
     addForm.style.display='block';
@@ -32,7 +31,7 @@ window.addEventListener('click',function(){
 //----------------------------------------------------------------------------
 
 // array have all houses
-let allHouses=[];
+let allHouses=JSON.parse(localStorage.getItem('houses'))? JSON.parse(localStorage.getItem('houses')):[];
 
 //get the add house form 
 let addHouseForm=document.getElementById('addHouseForm');
@@ -78,11 +77,13 @@ addHouseForm.addEventListener('submit',function(event){
     new HouseInfo(ty,loca,ar,decr,pr,imagesArray);
     console.log(allHouses);
     addForm.style.visibility='hidden';
-    cardRender();
+    cardRender(ty,loca,ar,decr,pr,imagesArray);
+    setHouse();
 });
 
+getHouse();
 let cardArray=[];
-function cardRender()
+function cardRender(type,location,area,decription,price,images)
 {
     let houseCard=document.createElement('div');
     let housCardInner=document.createElement('div');
@@ -98,6 +99,7 @@ function cardRender()
     for (let i = 0; i < allHouses.length; i++) {
         
         houseCard.setAttribute('class','house-card');
+        houseCard.setAttribute('id',`Housecard${i}`);
         parent.appendChild(houseCard);
         houseCard.appendChild(housCardInner);
         housCardInner.setAttribute('class','house-card-ineer');
@@ -119,13 +121,13 @@ function cardRender()
         houseInfo.setAttribute('class','house-info');
         
         houseInfo.innerHTML=`
-        <p>${allHouses[i].type}</p>
+        <p>${type}</p>
                            <p>
-                               ${allHouses[i].decription}
+                               ${decription}
                            </p>
                        </div>
                        <div class="house-price">
-                           $${allHouses[i].price}
+                           $${price}
                        </div>
         `;
         houseCardBack.setAttribute('class','house-card-back');
@@ -134,15 +136,15 @@ function cardRender()
         houseCardBack.appendChild(listContianer);
         listContianer.innerHTML=`     
         <ul>
-        <li>${allHouses[i].location}</li>
-        <li>${allHouses[i].area}</li>
+        <li>${location}</li>
+        <li>${area}</li>
         <li>3 room</li>
         </ul>
         `;
         btnContainer.setAttribute('id','btnContainer');
         houseCardBack.appendChild(btnContainer);
         btnContainer.innerHTML=`
-        <button class="card-btn" id="cardBtn">
+        <button class="card-btn" id="cardBtn${i}"  onClick="getID(this.id)">
         See more
         </button>
         `;
@@ -151,7 +153,28 @@ function cardRender()
     
     }
 }
+// ---------------------------------------------------------
+// Get the waiting id
+let waiting=document.getElementById('waiting') 
 
+
+function getID(btnId)
+{
+    console.log(btnId);
+    localStorage.setItem('index',JSON.stringify(btnId));
+     waiting.style.display='block';
+     window.scrollTo(0,400);
+     setInterval(() => {
+         window.location.replace("see-more.html");
+         
+     }, 2000);
+}
+var elms = document.querySelectorAll('button[class~="card-btn"]');
+
+    
+    console.log(elms);
+
+//--------------------------------------------------------------------------------
 let searchForm=document.getElementById('searchForm');
 // let alls=document.getElementsByClassName('house-price');
 // console.log(document.getElementsByClassName('house-price'));
@@ -187,13 +210,32 @@ searchForm.addEventListener('submit',function(event){
             houseCard[i].style.display='none';
         }
     }
-    
+    getHouse();
 
-    console.log(x);
 });
 
+//------------------------------------------LocalStorge --------------------------------
+
+
+function setHouse()
+{
+    let Houses=localStorage.setItem('houses',JSON.stringify(allHouses));
+    
+
+}
+
+function getHouse()
+{
+    let allData=JSON.parse(localStorage.getItem('houses'));
+    for (let i = 0; i < allData.length; i++) {
+        cardRender(allData[i].type,allData[i].location,allData[i].area,allData[i].decription,allData[i].price,allData[i].images);
+        if (i%4==0) {
+            console.log('hi'+1);
+          
+        }
+    }
+
+}
 
 
 
-
-// end of the code
