@@ -265,3 +265,113 @@ figure {
   50%{ text-shadow:0 0 30px black; }
   75%{ text-shadow:0 0 30px cyan; }
 }
+
+
+/*----*/
+.name1  {
+  text-align: center;
+  font-size: larger;
+  margin-left: 310px;
+  /* color: black; */
+  font-weight: 800;
+}
+
+
+.email2  {
+  text-align: center;
+  font-size: larger;
+  margin-left: 320px;
+  /* color: black; */
+  font-weight: 800;
+}
+
+.center1  {
+  text-align: center;
+  font-size: larger;
+  margin-left: 300px;
+  /* color: black; */
+  font-weight: 800;
+}
+
+
+main form input ::placeholder {
+  color: gray;
+  padding-left: 20px;
+}
+
+
+
+  input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  input[type=number], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  input[type=email], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  input[type=date], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
+  input[type=submit] {
+    width: 50%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+ .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding-left: 550px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .h2 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding-left: 660px;
+  }
